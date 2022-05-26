@@ -212,6 +212,9 @@ cmd: composer create-project laravel/laravel blogApp
           $userAdmin->password  = Hash::make("admin");
           $userAdmin->save();
     to: database/seeders/UserSeeder.php **inside run function 
+    and import to database/seeders/UserSeeder.php
+          use Illuminate\Support\Facades\Hash;
+          use Modules\Auth\Entities\User;
 
     and call seeder inside run function DatabaseSeeder.php
     copy 
