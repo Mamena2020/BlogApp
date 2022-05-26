@@ -76,7 +76,7 @@ cmd: composer create-project laravel/laravel blogApp
 
     After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
 
-    Generate basic scaffolding and login and registration for bootstrap (using this for this tutorial)
+    Generate basic scaffolding and login and registration for bootstrap **using this for this tutorial
     cmd: php artisan ui bootstrap
          php artisan ui bootstrap --auth
     Generate basic scaffolding and login and registration for vue
@@ -108,10 +108,18 @@ cmd: composer create-project laravel/laravel blogApp
 
     cmd: composer require nwidart/laravel-modules
     The package will automatically register a service provider and alias.
-    cmd: php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider",
+    cmd: php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
     By default the module classes are not loaded automatically.
     copy: "Modules\\": "Modules/"
     to: package.json, section autoload, psr-4
+            {
+                "autoload": {
+                    "psr-4": {
+                    "App\\": "app/",
+                    "Modules\\": "Modules/"
+                    }
+                }
+            }
     then run, to load class modules
     cmd: composer dump-autoload 
     Command to create module, controller, model, request, ect.. 
@@ -182,8 +190,8 @@ cmd: composer create-project laravel/laravel blogApp
     to: <form method="POST" action="{{ route('auth.login') }}">
     
  [4]. Create User Seeder
-    cmd:  php artisan make:seeder UserSeeder
     
+    cmd:  php artisan make:seeder UserSeeder
     copy: 
           $userAdmin = new User;
           $userAdmin->name  = "Admin";
