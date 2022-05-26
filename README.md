@@ -71,8 +71,10 @@ cmd: composer create-project laravel/laravel blogApp
 
 [1]. Auth
     Generating Auth with scaffolding(controller,UI)
+   
     cmd: composer require laravel/ui
-	After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
+	
+    After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
 
     After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
 
@@ -159,13 +161,14 @@ cmd: composer create-project laravel/laravel blogApp
     copy:  resources/views/auth
     to: Modules/Auth/Resources/views
 
+
     - Model
     Create User Model
     cmd: php artisan module:make-model User Auth
     After that, 
     copy: User Model from /App/Models/User.php   **without namespace
     to: Module/Auth/Entities/User.php
-    Modify config/auth/php
+    Modify config/auth.php
     change: sections-> providers/users/model
     from: 'model' => App\Models\User::class,
     to: 'model' => Modules\Auth\Entities\User::class,
