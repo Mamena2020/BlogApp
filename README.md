@@ -64,17 +64,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 # Laravel tutorial: case (Blog App) with Laravel 9
-# instalation 
+# Instalation 
 cmd: composer create-project laravel/laravel blogApp
 
 [0] Create DB and Set in environments (.env)
 
 [1]. Auth
- - Generating Auth with scaffolding(controller,UI)
-     cmd: composer require laravel/ui
-	 After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
+    Generating Auth with scaffolding(controller,UI)
+    cmd: composer require laravel/ui
+	After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
 
-     After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
+    After Composer installation runs artisan command to generate scaffolding. you can bootstrap or vue or react any of them laravel/ui for Login Registration.
 
     Generate basic scaffolding and login and registration for bootstrap (using this for this tutorial)
     cmd: php artisan ui bootstrap
