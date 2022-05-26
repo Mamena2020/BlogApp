@@ -180,7 +180,7 @@ cmd: composer create-project laravel/laravel blogApp
     to:  Module/Auth/Http/Controllers/LoginController.php   **without namespace
     then override  function showLoginForm and retun to
     return view('auth::auth.login');
-    code bellow: copy to Module/Auth/Http/Controllers/LoginController.php
+    copy code bellow to Module/Auth/Http/Controllers/LoginController.php
             /**
             * Show the application's login form.
             *
@@ -192,7 +192,7 @@ cmd: composer create-project laravel/laravel blogApp
             }
 
     - Routes
-    copy code bellow to  Module/Auth/Routes/web.php
+    copy code bellow to Module/Auth/Routes/web.php
         Route::group(['as'=>'auth.'], function () {
             Route::get('/login', 'LoginController@showLoginForm')->name("login");
             Route::post('/login', 'LoginController@login')->name("login.attempt");
@@ -200,7 +200,7 @@ cmd: composer create-project laravel/laravel blogApp
     then modify access route login form post 
     modify file ini here: Modules/Auth/Resources/views/login.blade.php
     change: <form method="POST" action="{{ route('login') }}">
-    to: <form method="POST" action="{{ route('auth.login') }}">
+    to: <form method="POST" action="{{ route('auth.login.attempt') }}">
     
  [4]. Create User Seeder
     
